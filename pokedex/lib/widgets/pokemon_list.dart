@@ -40,8 +40,9 @@ class _PokemonListState extends State<PokemonList> {
                   return PokeListItem(pokemon: _list[index]);
                 });
           } else if (snapshot.hasError) {
-            return const Center(
-              child: Text('error geldi'),
+            return  Center(
+              // ignore: unnecessary_string_interpolations
+              child: Text("${snapshot.error}"),
             );
           } else {
             return const Center(

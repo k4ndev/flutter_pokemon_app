@@ -23,4 +23,12 @@ class UIHelper {
       return 0.3.sh;
     }
   }
+
+  static EdgeInsets getPokeInfoPadding() {
+      if (ScreenUtil().orientation == Orientation.portrait) {
+      return EdgeInsets.all(10.w);
+    } else {
+      return EdgeInsets.all(6.w);
+    }
+  }
 }

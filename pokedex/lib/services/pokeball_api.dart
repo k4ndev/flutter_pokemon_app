@@ -12,9 +12,10 @@ class PokeApi {
     var result = await Dio().get(_url);
     var pokeList = jsonDecode(result.data)['pokemon'];
 
+    
     if (pokeList is List) {
       _list = pokeList.map((e) => PokemonModel.fromJson(e)).toList();
-    } 
+    }
     return _list;
   }
 }
